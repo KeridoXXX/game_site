@@ -1,0 +1,414 @@
+/*____________________________________FONTS__________________________________*/
+
+@font-face {
+  font-family: "dogicaregular";
+  src: url("lehmannen.dk/kea/04_animation/game_site/font/dogicapixel-webfont.woff2")
+      format("woff2"),
+    url("font/dogica-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*_________________________screens______________________________________________ */
+
+#screen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  /*border: 2px dotted red;*/
+}
+
+#game_background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(update/main_game_screen.png);
+  background-size: cover;
+}
+
+#start {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(update/main_game_screen_2.png);
+  background-size: cover;
+}
+
+#start_knap {
+  position: absolute;
+  top: 60%;
+  left: 38%;
+
+  animation-name: pulse;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+
+#logo {
+  position: absolute;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+#game_over {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(update/main_game_screen_3.png);
+  background-size: cover;
+}
+
+#play_again_knap_go {
+  position: absolute;
+  top: 60%;
+  left: 34%;
+
+  animation-name: pulse;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+#you_win {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(update/main_game_screen_4.png);
+  background-size: cover;
+}
+
+#play_again_knap_yw {
+  position: absolute;
+  top: 60%;
+  left: 34%;
+
+  animation-name: pulse;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.hide_screen {
+  display: none;
+}
+
+/*____________________________________________________container og sprites_______________________________________________________*/
+
+#game_elements #spil_sushi_container_1 {
+  width: 10%;
+  aspect-ratio: 1/1;
+  position: absolute;
+}
+
+#game_elements #spil_sushi_sprite_1 {
+  background-image: url(update/rulle_2.png);
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+
+#game_elements #spil_sushi_container_2 {
+  width: 10%;
+  aspect-ratio: 1/1;
+  position: absolute;
+}
+
+#game_elements #spil_sushi_sprite_2 {
+  background-image: url(update/lort.png);
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+
+#game_elements #spil_sushi_container_3 {
+  width: 10%;
+  aspect-ratio: 1/1;
+  position: absolute;
+}
+
+#game_elements #spil_sushi_sprite_3 {
+  background-image: url(update/rulle_1.png);
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+
+#game_elements #spil_sushi_container_4 {
+  width: 10%;
+  aspect-ratio: 1/1;
+  position: absolute;
+}
+
+#game_elements #spil_sushi_sprite_4 {
+  background-image: url(update/nigiri_1.png);
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+
+#game_elements #spil_sushi_container_5 {
+  width: 10%;
+  aspect-ratio: 1/1;
+  position: absolute;
+}
+
+#game_elements #spil_sushi_sprite_5 {
+  background-image: url(update/nigiri_2.png);
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+
+#game_elements #spil_sushi_container_6 {
+  width: 10%;
+  aspect-ratio: 1/1;
+  position: absolute;
+}
+
+#game_elements #spil_sushi_sprite_6 {
+  background-image: url(update/giftig_fisk.png);
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+
+#game_foreground #dame_container_1 {
+  position: absolute;
+  aspect-ratio: 1/3;
+  width: 12%;
+  left: 6%;
+  top: 45%;
+}
+
+#game_foreground #dame_neutral {
+  background-image: url("update/musse_neutral.png");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#game_foreground #dame_container_2 {
+  position: absolute;
+
+  aspect-ratio: 1/3;
+  width: 12%;
+  left: 6%;
+  top: 45%;
+}
+
+#game_foreground #dame_glad {
+  background-image: url("update/musse_glad.png");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#game_foreground #dame_container_3 {
+  position: absolute;
+  aspect-ratio: 1/3;
+  width: 12%;
+  left: 6%;
+  top: 45%;
+}
+
+#game_foreground #dame_ked {
+  background-image: url("update/musse_ked.png");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+/*____________________________________________________container og sprites_______________________________________________________*/
+
+/*__________________________________animations_____________________________________________________________ */
+
+.rulle1 {
+  animation-name: rulle1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes rulle1 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(1000%);
+  }
+}
+
+.remove {
+  animation-name: remove;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+.pause {
+  animation-play-state: paused;
+}
+
+@keyframes remove {
+  0% {
+    transform: scale(100%) rotate(0);
+  }
+
+  100% {
+    transform: scale(0%) rotate(360deg);
+  }
+}
+
+.rulle2 {
+  animation-name: rulle2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes rulle2 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-1000%);
+  }
+}
+
+.dame_hide {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: inherit;
+}
+
+.delay1 {
+  animation-delay: 1.2s;
+}
+
+.delay2 {
+  animation-delay: 2.4s;
+}
+
+/*_________________________________animations__________________________________________________________ */
+
+/*____________________________________positions_________________________________________________________*/
+
+/* nederste bånd */
+.pos1 {
+  top: 33%;
+  left: 0%;
+}
+
+/* øverste bånd */
+.pos2 {
+  top: 7%;
+  left: 0%;
+}
+
+.pos3 {
+  top: 4%;
+  left: 90%;
+}
+
+.pos4 {
+  top: 31%;
+  left: 90%;
+}
+
+/*______________________________positions__________________________________________________________________*/
+
+#ui_elements #points_container {
+  position: absolute;
+  top: 54%;
+  left: 40%;
+  aspect-ratio: 3/1;
+}
+
+#ui_elements h3 {
+  color: #99cb05;
+  text-shadow: #996c05 1px 1px 1px;
+  font-size: 1.4rem;
+  font-family: dogicaregular;
+}
+
+#depleted_hit_points {
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#hit_points {
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  aspect-ratio: 3/1;
+}
+
+#timer_container {
+  position: absolute;
+  outline: solid black;
+  width: 5%;
+  aspect-ratio: 1/8;
+  top: 57%;
+  left: 48%;
+  transform: rotate(90deg);
+}
+
+#timer_sprite {
+  width: 100%;
+  height: 100%;
+  background-color: #99cb05;
+  transform-origin: bottom;
+}
+
+.timer {
+  animation-name: timer;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes timer {
+  0% {
+    transform: scaleY(1);
+    background-color: #99cb05;
+  }
+
+  70% {
+    background-color: #996c05;
+  }
+
+  100% {
+    transform: scaleY(0);
+    background-color: red;
+  }
+}

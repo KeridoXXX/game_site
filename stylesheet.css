@@ -1,0 +1,150 @@
+/* colors */
+/*
+    #FBF7F3 Hvid
+    #426E5D Mørk
+    #E5B083 Lys
+    #20283D Blå
+*/
+
+body {
+  background: #426e5d;
+}
+
+/* Font */
+@font-face {
+  font-family: "dogicaregular";
+  src: url("/kea/04_animation/game_site/font/dogica-webfont.woff2")
+      format("woff2"),
+    url("font/dogica-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "dogicabold";
+  src: url("/kea/04_animation/game_site/font/dogicabold-webfont.woff2")
+      format("woff2"),
+    url("font/dogicabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "dogica_pixelregular";
+  src: url("lehmannen.dk/kea/04_animation/game_site/font/dogicapixel-webfont.woff2")
+      format("woff2"),
+    url("font/dogicapixel-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "dogica_pixelbold";
+  src: url("http://lehmannen.dk/kea/04_animation/game_site/font/dogicapixelbold-webfont.woff2")
+      format("woff2"),
+    url("font/dogicapixelbold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+h3 {
+  font-family: "dogicabold";
+  font-weight: normal;
+  font-style: normal;
+  color: #fbf7f3;
+  text-shadow: #20283d 2px 2px 1px;
+}
+
+main p {
+  font-family: "dogicaregular";
+  font-weight: normal;
+  font-style: normal;
+  color: #fbf7f3;
+  text-shadow: #20283d 1px 1px 1px;
+}
+/* slut med fonts */
+
+.logo {
+  text-align: center;
+}
+
+/* Her kommer der kode til nav-menu */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+header {
+  top: 0rem;
+  padding: 1rem 1rem;
+  gap: 2px;
+  box-shadow: 0 12px 28px 0 rgba(245, 247, 250, 0);
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  padding-bottom: 1rem;
+  gap: 2rem;
+  overflow-x: visible;
+}
+
+header nav ul a {
+  color: #fbf7f3;
+  font-family: "dogicaregular";
+  text-decoration: none;
+  font-size: 1rem;
+  text-shadow: #20283d 1px 1px 1px;
+}
+
+/* fucking mediaqueries til nav-menu */
+
+@media (max-width: 600px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+/* Her slutter kode til nav-menu */
+
+/*ASSETS*/
+
+#assets .section_wrapper {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+hr {
+  border-color: #fbf7f3;
+}
+
+#assets .section_5 img {
+  max-width: 100%;
+}
+
+.points h3 {
+  color: #99cb05;
+  text-shadow: #996c05 1px 1px 1px;
+}
+
+/* DOCUMENTS */
+
+.aktivitetsdiagram img {
+  max-width: 100%;
+}
+
+/* 
+1. Hvordan kan jeg bedre align content i midten?
+2. Skal section wrapperen være parent eller child?
+3. Hvorfor loader/scaler/whatever mine SVGS så langsomt? (især den store?)
+3.5. Den crasher på mobil. (UPLOAD PNGS I ILLUSTRATOR OG EKSPORTER SOM SVG)
+
+4. Varnish cache? 
+
+
+5. Overvej en mediaquery til dine assets så de sidder i et grid delt på midten
+6. ????
+7. Profit.
+*/
